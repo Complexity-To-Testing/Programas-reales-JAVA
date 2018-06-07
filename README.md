@@ -1,6 +1,6 @@
 # Programas-reales-JAVA
 ## Descripción
-Programas java desarollados manualmente que se han utilizado en el [servicio web](https://github.com/Complexity-To-Testing/GUI)  para analizar los resultados depues de aplicar 
+Programas java desarollados manualmente que se han utilizado en el [servicio web](https://github.com/Complexity-To-Testing/GUI)  para analizar los resultados depués de aplicar 
 diferentes tipos de mutaciontes (generados con Pitest) sobre estos.
 
 ### Programa Personaje
