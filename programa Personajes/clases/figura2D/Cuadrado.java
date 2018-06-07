@@ -20,10 +20,12 @@ public class Cuadrado implements Figura2D {
 	}
 
 	public double setLado(double lado) {
-		
+		if(lado >0) {
 			this.lado=lado;
 			return this.lado;
-		
+		}else {
+			return -1;
+		}
 	}
 
 	

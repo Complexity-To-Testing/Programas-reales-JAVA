@@ -9,7 +9,12 @@ public class Triangulo implements Figura2D{
 
 	public Triangulo(double ladoBase, double altura, double lateralIz, double lateralDer) {
 		super();
-		{
+		if(ladoBase>lateralIz+lateralDer) {
+			this.ladoBase = 3;
+			this.altura = 3*Math.sin(1.5);
+			this.lateralIz = 3;
+			this.lateralDer = 3;
+		}{
 			if(altura < lateralIz && altura < lateralDer) {
 				this.ladoBase = ladoBase;
 				this.altura = altura;
@@ -53,26 +58,33 @@ public class Triangulo implements Figura2D{
 
 	public double setBase(double i) {
 		// TODO Auto-generated method stub
-		
+		if(i>lateralIz+lateralDer) {
 			return this.ladoBase;
-		
+		}else {
+			this.ladoBase=i;
+			return this.ladoBase;
+		}
 		
 	}
 
 	public double setLadoIz(double i) {
 		// TODO Auto-generated method stub
-		
+		if(this.ladoBase>i+lateralDer) {
+			return this.lateralIz;
+		}else {
 			this.lateralIz=i;
 			return this.lateralIz;
-		
+		}
 	}
 
 	public double setLadoDer(int i) {
 		// TODO Auto-generated method stub
-	
+		if(this.ladoBase>lateralDer+i) {
+			return this.lateralDer;
+		}else {
 			this.lateralDer=i;
 			return this.lateralDer;
-		
+		}
 	}
 
 

@@ -51,10 +51,12 @@ public class Rectangulo implements Figura2D {
 	}
 
 	public double setLadoCorto(double ladoCorto) {
-		
+		if(ladoCorto>ladoLargo) {
+			return this.ladoCorto;
+		}else {
 			this.ladoCorto = ladoCorto;
 			return this.ladoCorto;
-		
+		}
 
 	}
 
@@ -63,10 +65,12 @@ public class Rectangulo implements Figura2D {
 	}
 
 	public double setLadoLargo(double ladoLargo) {
-		
+		if(ladoLargo<this.ladoCorto) {
+			return this.ladoLargo;
+		}else {
 			this.ladoLargo = ladoLargo;
 			return this.ladoLargo;
-		
+		}
 		
 	}
 

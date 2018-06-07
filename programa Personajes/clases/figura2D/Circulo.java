@@ -14,10 +14,12 @@ public class Circulo implements FiguraEsferica2D, Figura{
 	}
 
 	public double setRadio(double radio) {
-		
+		if(radio > 6) {
 			this.radio = radio;
 			return radio;
-		
+		}else {
+			return -1;
+		}
 		
 	}
 	

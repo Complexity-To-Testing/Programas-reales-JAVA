@@ -13,13 +13,13 @@ public class Ecuaciones {
 		//System.out.println("res: "+res);
 		return res;
 	}
-
+ 
 
 	public double ecu4(double[] xs) {
 		double result = 0.0;
 		double xi;
-		for(int i = 1; i <= xs.length; i++) {	
-			xi=xs[i-1];
+		for(int i = 1; i <= xs.length*200; i++) {	
+			xi=xs[i%xs.length];
 
 			double a=((i+1)*Math.pow(xi, 2))/pi;
 			double b=Math.pow(Math.sin(a), 20);
@@ -56,12 +56,12 @@ public class Ecuaciones {
 			int top=(int)xs[2];
 
 			 
-			for(int i =1; i <= top; i++) {
+			for(int i =1; i <= top*200; i++) {
 				a+=i*Math.cos((i+1)*x1+i);
 			}
 
 			
-			for(int i = 1; i <= top; i++) {
+			for(int i = 1; i <= top*200; i++) {
 				b+=i*Math.cos((i+1)*x2+i);
 			}
 
@@ -119,13 +119,13 @@ public class Ecuaciones {
 			return 0;
 		}
 		double x=1;
-		for(int i=0; i<entrada.length; i++) {
+		for(int i=0; i<entrada.length*200; i++) {
 			double num=0;
-			if(entrada[i]>100 && entrada[i] <200) {
-				if(entrada[i]%2==0) {
-					num=entrada[i]*2;
+			if(entrada[i%entrada.length]>100 && entrada[i%entrada.length] <200) {
+				if(entrada[i%entrada.length]%2==0) {
+					num=entrada[i%entrada.length]*2;
 				}else {
-					num=entrada[i];
+					num=entrada[i%entrada.length];
 				}
 			}
 			x*=num;
@@ -139,16 +139,16 @@ public class Ecuaciones {
 			return 0;
 		}
 		double x=0;
-		for(int i=0; i<entrada.length; i++) {
+		for(int i=0; i<entrada.length*200; i++) {
 			double num=0;
-			if(entrada[i]<0) {
-				if(entrada[i]%2==0) {
-					num=entrada[i];
+			if(entrada[i%entrada.length]<0) {
+				if(entrada[i%entrada.length]%2==0) {
+					num=entrada[i%entrada.length];
 				}else {
-					num=entrada[i] * -1;
+					num=entrada[i%entrada.length] * -1;
 				}
 			}
-			x+=entrada[i];
+			x+=entrada[i%entrada.length];
 		}
 		return x;
 	}
